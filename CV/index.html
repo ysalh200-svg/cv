@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yasser Saleh - CV</title>
+
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light px-3 py-3">
+
+        <div class="logo rounded">
+            Yasser Saleh
+        </div>
+
+        <button id="menuButton" class="btn btn-outline-dark">Menu</button>
+
+        <ul id="menu" class="d-md-flex gap-3 mb-0">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <main class="cv container rounded shadow-sm my-4 p-4">
+      <div class="row g-3">
+        <div class="col-12">
+
+        <!-- Header -->
+
+        <header class="d-flex flex-column flex-md-row align-items-center gap-3 pb-3">
+
+            <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="yellow" />
+            </svg>
+
+
+            <div class="header-info text-center text-md-start">
+
+                <h1>Yasser Saleh</h1>
+
+                <p>Email: yasser@example.com</p>
+
+                <p>Phone: 000-000-0000</p>
+
+            </div>
+
+        </header>
+        </div>
+        <div class="col-12 col-lg-6">
+
+
+        <!-- About Me -->
+
+        <section id="about" class="card p-3 shadow-sm h-100">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am an Information Technology student interested in
+                programming, web development, and new technologies.
+            </p>
+
+        </section>
+
+
+        </div>
+        <div class="col-12 col-lg-6">
+        <!-- Education -->
+
+        <!-- City clock using Fetch API -->
+        <section id="clock" class="card p-3 shadow-sm border">
+            <h2>World Clock</h2>
+            <p class="mb-1">City: <strong id="clockCity">Bangkok, Thailand</strong></p>
+            <p class="fs-3 fw-bold mb-1" id="clockTime" role="status">Loading...</p>
+            <small id="clockNote" class="text-muted">Time from Fetch API</small>
+        </section>
+
+        <section id="education" class="card p-3 shadow-sm h-100">
+
+            <h2>Education</h2>
+
+            <h3>Information Technology</h3>
+
+            <p>University Student</p>
+
+        </section>
+
+
+        </div>
+        <div class="col-12">
+        <!-- Projects (Carousel) -->
+
+        <section id="projects" class="card p-3 shadow-sm h-100">
+
+            <h2>Projects</h2>
+
+            <div class="slideshow-container rounded overflow-hidden">
+
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://picsum.photos/id/180/1000/400" alt="Flight Booking Website">
+                    <div class="text">Flight Booking Website</div>
+                </div>
+
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://picsum.photos/id/60/1000/400" alt="Student Management System">
+                    <div class="text">Student Management System</div>
+                </div>
+
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://picsum.photos/id/119/1000/400" alt="Personal Portfolio Site">
+                    <div class="text">Personal Portfolio Site</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div class="dots-container rounded-bottom">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </section>
+
+
+        </div>
+        <div class="col-12 col-md-6">
+        <!-- Skills -->
+
+        <section id="skills" class="card p-3 shadow-sm h-100">
+
+            <h2>Skills</h2>
+
+            <p>HTML</p>
+
+            <p>CSS</p>
+
+            <p>JavaScript</p>
+
+            <p>Programming</p>
+
+        </section>
+
+
+        </div>
+        <div class="col-12 col-md-6">
+        <!-- Languages -->
+
+        <section class="card p-3 shadow-sm h-100">
+
+            <h2>Languages</h2>
+
+            <p><b>Arabic:</b> Native</p>
+
+            <p><b>English:</b> Good</p>
+
+        </section>
+
+
+        </div>
+        <div class="col-12 col-md-6">
+        <!-- Activities -->
+
+        <section class="card p-3 shadow-sm h-100">
+
+            <h2>Activities</h2>
+
+            <p>Volunteer at University Events</p>
+
+            <p>Programming Club Member</p>
+
+        </section>
+
+
+        </div>
+        <div class="col-12 col-md-6">
+        <!-- Contact Me -->
+
+        <section id="contact" class="card p-3 shadow-sm h-100">
+
+            <h2>Contact Me</h2>
+
+            <form id="contactForm" class="mx-auto mx-md-0" novalidate>
+
+                <label for="name">Name</label>
+                <input
+                    class="form-control"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    pattern="[A-Za-z ]{2,40}"
+                    title="2-40 letters and spaces only"
+                    required>
+
+                <label for="email">Email</label>
+                <input
+                    class="form-control"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Enter a valid email address"
+                    required>
+
+                <label for="phone">Phone</label>
+                <input
+                    class="form-control"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="000-000-0000"
+                    pattern="[0-9-]{7,15}"
+                    title="7-15 digits, dashes allowed"
+                    required>
+
+                <label for="message">Message</label>
+                <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here"
+                    minlength="10"
+                    required></textarea>
+
+                <button type="submit" class="btn btn-warning">Send</button>
+
+                <p id="formStatus"></p>
+
+            </form>
+
+        </section>
+
+
+        </div>
+        <div class="col-12">
+        <!-- Visitors -->
+
+        <section id="visitors" class="card p-3 shadow-sm h-100">
+
+            <h2>Website Visitors</h2>
+
+            <p>Number of visits: <span id="visitorCount">0</span></p>
+
+        </section>
+
+
+      </div>
+      </div>
+    </main>
+
+
+    <!-- Go To Top -->
+
+    <button id="topButton" class="btn btn-dark">
+        Go to Top
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

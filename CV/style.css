@@ -1,0 +1,342 @@
+body {
+    font-family: Arial;
+    background-color: rgb(252, 209, 53);
+    margin: 0;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: rgb(255, 241, 185);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+
+/* Logo */
+
+.logo {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Menu */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Menu Button */
+
+#menuButton {
+    display: none;
+    padding: 8px;
+}
+
+
+/* CV */
+
+.cv {
+    background-color: rgb(255, 241, 185);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+
+/* Profile Picture */
+
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+
+/* Header Information */
+
+.header-info h1 {
+    margin-bottom: 5px;
+}
+
+
+/* Sections */
+
+section {
+    margin-top: 30px;
+}
+
+
+section h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+
+
+/* Skills */
+
+#skills p {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+
+/* Go To Top */
+
+#topButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px;
+    display: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav {
+        display: block;
+    }
+
+    #menuButton {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: none;
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    .cv {
+        width: 90%;
+    }
+
+}
+
+
+/* ===================================================
+   Projects Carousel / Slideshow
+   =================================================== */
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.slideshow-container img {
+    width: 100%;
+    display: block;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots-container {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 241, 185);
+    border: 1px solid black;
+    border-top: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+/* Fading animation */
+.slide-fade {
+    animation-name: slideFade;
+    animation-duration: 1s;
+}
+
+@keyframes slideFade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+
+/* ===================================================
+   Contact Form
+   =================================================== */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+#contactForm label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid black;
+    font-family: Arial;
+}
+
+#contactForm input:invalid,
+#contactForm textarea:invalid {
+    border-color: red;
+}
+
+#contactForm button {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(252, 209, 53);
+    cursor: pointer;
+    width: fit-content;
+}
+
+#contactForm button:hover {
+    background-color: rgb(255, 241, 185);
+}
+
+#formStatus {
+    font-weight: bold;
+}
+
+
+/* ===================================================
+   Visitors
+   =================================================== */
+
+#visitors p {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 8px;
+}
+/* Bootstrap-friendly responsive fixes */
+.cv { max-width: 1000px; }
+#clock { color: #222; }
+#clock h2 { margin-bottom: 12px; }
+@media (max-width: 600px) { .cv { width: 95%; } }
+
+/* Bootstrap framework enhancements */
+.cv section.card { background-color: #fff9e6; border: 1px solid #e1cb8c; }
+.cv .form-control { width: 100%; border-radius: .375rem; }
+.cv .btn { border-radius: .375rem; }
+@media (max-width: 600px) { .cv { width: 94%; } }
+
+/* Bootstrap supplies layout, cards, forms and responsive grid. */
+.cv.container { width: min(94%, 1100px); max-width: 1100px; }
+.cv .card { background: #fff9e5; }
+.cv .row > div { min-width: 0; }
+#contactForm .form-control { width: 100%; }
